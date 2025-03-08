@@ -10,6 +10,8 @@ with app.app_context():
     BakedGood.query.delete()
     Bakery.query.delete()
     
+    print('seeding!!!')
+
     bakeries = []
     bakeries.append(Bakery(name='Delightful donuts'));
     bakeries.append(Bakery(name='Incredible crullers'));
@@ -23,3 +25,5 @@ with app.app_context():
 
     db.session.add_all(baked_goods)
     db.session.commit()
+
+    print('seeding complete!!')
